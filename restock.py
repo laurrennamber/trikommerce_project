@@ -43,7 +43,11 @@ The function will also update the inventory_records (For restocking) for a  give
 
     while restock_needed == False:
         restocked_units = 0
-        inventory_records.append(current_day, sold_units, restocked_units, available_items)
+        inventory_records.append(current_day)
+        inventory_records.append(sold_units)
+        inventory_records.append(restocked_units)
+        inventory_records.append(available_items)
+        print("inventory records: ", inventory_records)
         #current_day = current_day + 1
         break
 
