@@ -32,7 +32,7 @@ The function will also update the inventory_records (For restocking) for a  give
         restock_needed = False
     ## if statements rather than while?
     if restock_needed:
-        restocked_units = 2000
+        restocked_units = 2000 - available_items
         #running total of difference between 2000 items (total sales)
         
         # sold units will be updated in sales() after first day
@@ -43,6 +43,7 @@ The function will also update the inventory_records (For restocking) for a  give
         # inventory_records.append(restocked_units)
         # inventory_records.append(available_items)
         # initializing list
+        available_items = available_items + restocked_units 
         sub_list = [current_day, sold_units, restocked_units, available_items]
         inventory_records.append(sub_list)
         # res = []
