@@ -19,9 +19,9 @@ The function will also update the inventory_records (For restocking) for a  give
 ## the first stocking begins on day 0
     #occurs every 7 days
 ## initial stock level is set to 2000 units (and may not exceed this value)
-    print("current inventory records: " + inventory_records)
+    print("current inventory records: " , inventory_records)
     inventory_records.clear()
-    print("current inventory records: " + inventory_records)
+    print("current inventory records: " , inventory_records)
 ## MY COMMENTS
     # don't need to do for loop for 0-50 as the function itself is being called 49 times in simulation
     if current_day == 0:
