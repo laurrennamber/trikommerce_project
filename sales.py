@@ -27,12 +27,14 @@ The function will also update the inventory_records (For restocking) for a  give
    ########################################
 
 
+    current_day = current_day + 1
     import random
     sold_units =  random.randrange(0,2000) ### check this range
 
 
     available_items = available_items - sold_units
 
+    inventory_records.update(current_day, available_items)
 
    ## don't need to update current day?
    ## don't need to update inventory records as this is current not past?
