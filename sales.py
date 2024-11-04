@@ -30,10 +30,10 @@ The function will also update the inventory_records (For restocking) for a  give
 
     current_day = current_day + 1
     import random
-    if (current_day % 7 != 0) or current_day == 0:
+    if ((current_day % 7) != 0) and current_day != 0:
         sold_units =  random.randrange(0,201) ### check this range
     else:
-        sold_units = 10
+        sold_units = 0
 
 
     available_items = available_items - sold_units
