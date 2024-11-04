@@ -20,8 +20,6 @@ The function will also update the inventory_records (For restocking) for a  give
     #occurs every 7 days
 ## initial stock level is set to 2000 units (and may not exceed this value)
     print("current inventory records: " , inventory_records)
-    ## TESTING ROW ISSUE:
-    ##inventory_records.clear()
     print("current inventory records: " , inventory_records)
 ## MY COMMENTS
     # don't need to do for loop for 0-50 as the function itself is being called 49 times in simulation
@@ -39,19 +37,40 @@ The function will also update the inventory_records (For restocking) for a  give
         
         # sold units will be updated in sales() after first day
         #inventory_records.append(current_day, sold_units, restocked_units, available_items)
-        inventory_records.append(current_day)
-        inventory_records.append(sold_units)
-        inventory_records.append(restocked_units)
-        inventory_records.append(available_items)
+        # TESTING ROW ISSUE:
+        # inventory_records.append(current_day)
+        # inventory_records.append(sold_units)
+        # inventory_records.append(restocked_units)
+        # inventory_records.append(available_items)
+        # initializing list
+        sub_list = [current_day, sold_units, restocked_units, available_items]
+        inventory_records.append(sub_list)
+        # res = []
+        # for row in inventory_records:
+ 
+        #     flag = True
+ 
+        #     # checking for all elements in list
+        #     for ele in sub_list:
+        #         if ele not in row:
+        #             flag = False
+ 
+        #     if flag:
+        #         res.append(row)
+ 
+        # # printing result
+        # print("Rows with list elements : " + str(res))
         print("inventory records (true): ", inventory_records)
         #current_day = current_day + 1
 
     elif restock_needed == False:
         restocked_units = 0
-        inventory_records.append(current_day)
-        inventory_records.append(sold_units)
-        inventory_records.append(restocked_units)
-        inventory_records.append(available_items)
+        # inventory_records.append(current_day)
+        # inventory_records.append(sold_units)
+        # inventory_records.append(restocked_units)
+        # inventory_records.append(available_items)
+        sub_list = [current_day, sold_units, restocked_units, available_items]
+        inventory_records.append(sub_list)
         print("inventory records (false): ", inventory_records)
         #current_day = current_day + 1
 

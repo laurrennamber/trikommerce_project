@@ -25,13 +25,15 @@ The function will also update the inventory_records (For restocking) for a  give
    #import random
    #print(random.randrange(1,10))
    ########################################
-    inventory_records.remove(current_day)
-    inventory_records.remove(available_items)
+    #inventory_records.remove(current_day)
+    #inventory_records.remove(available_items)
 
     current_day = current_day + 1
     import random
     if (current_day % 7 != 0) or current_day == 0:
         sold_units =  random.randrange(0,201) ### check this range
+    else:
+        sold_units = 10
 
 
     available_items = available_items - sold_units
