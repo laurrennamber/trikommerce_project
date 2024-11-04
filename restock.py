@@ -38,13 +38,13 @@ The function will also update the inventory_records (For restocking) for a  give
         
         # sold units will be updated in sales() after first day
         inventory_records.append(current_day, sold_units, restocked_units, available_items)
-        current_day = current_day + 1
+        #current_day = current_day + 1
         break
 
     while restock_needed == False:
         restocked_units = 0
         inventory_records.append(current_day, sold_units, restocked_units, available_items)
-        current_day = current_day + 1
+        #current_day = current_day + 1
         break
 
     return available_items
