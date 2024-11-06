@@ -17,8 +17,6 @@ def main():
         choice = input("Enter your choice: ")
         if choice == '1':
             run_simulation(total_days, inventory_records)
-            #ive added
-            print(inventory_records)
             generate_report(inventory_records)
             print("Report generated successfully.")
         elif choice == '2':

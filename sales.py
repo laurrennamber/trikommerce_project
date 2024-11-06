@@ -28,7 +28,7 @@ The function will also update the inventory_records (For restocking) for a  give
     #inventory_records.remove(current_day)
     #inventory_records.remove(available_items)
 
-    #current_day = current_day + 1
+    
     import random
     if ((current_day % 7) == 0):
         sold_units = 0
@@ -43,8 +43,8 @@ The function will also update the inventory_records (For restocking) for a  give
     subset = [current_day, sold_units, restocked_units, available_items]
     position_of_subset = int(current_day)
     inventory_records[position_of_subset][1] = sold_units
+    inventory_records[position_of_subset][3] = available_items
     #inventory_records.update(current_day, available_items)
-    #current_day = current_day + 1
    ## don't need to update current day?
    ## don't need to update inventory records as this is current not past?
    #inventory_records.update(available_items)

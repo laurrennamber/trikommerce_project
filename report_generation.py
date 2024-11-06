@@ -6,6 +6,4 @@ def generate_report(inventory_records):
     
     with open('inventory_report_Tshirts.csv', 'w', newline='') as file:
         writer = csv.writer(file)
-        ## i've added
-        print(inventory_records)
         writer.writerows(report)

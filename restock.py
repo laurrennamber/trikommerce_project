@@ -19,12 +19,10 @@ The function will also update the inventory_records (For restocking) for a  give
 ## the first stocking begins on day 0
     #occurs every 7 days
 ## initial stock level is set to 2000 units (and may not exceed this value)
-    print("current inventory records: " , inventory_records)
-    print("current inventory records: " , inventory_records)
 ## MY COMMENTS
     # don't need to do for loop for 0-50 as the function itself is being called 49 times in simulation
     if current_day == 0:
-        restock_needed = False
+        restock_needed = True
 
     elif ((current_day % 7) == 0) and available_items != 2000 :
         restock_needed = True
@@ -33,6 +31,7 @@ The function will also update the inventory_records (For restocking) for a  give
     ## if statements rather than while?
     if restock_needed:
         restocked_units = 2000 - available_items
+        #restocked_units = 69
         #running total of difference between 2000 items (total sales)
         
         # sold units will be updated in sales() after first day
@@ -61,8 +60,8 @@ The function will also update the inventory_records (For restocking) for a  give
  
         # # printing result
         # print("Rows with list elements : " + str(res))
-        print("inventory records (true): ", inventory_records)
-        #current_day = current_day + 1
+
+       # current_day = current_day + 1
 
     elif restock_needed == False:
         restocked_units = 0
@@ -70,9 +69,11 @@ The function will also update the inventory_records (For restocking) for a  give
         # inventory_records.append(sold_units)
         # inventory_records.append(restocked_units)
         # inventory_records.append(available_items)
+        
+        
         sub_list = [current_day, sold_units, restocked_units, available_items]
         inventory_records.append(sub_list)
-        print("inventory records (false): ", inventory_records)
-        #current_day = current_day + 1
+
+        
 
     return available_items

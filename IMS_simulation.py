@@ -2,7 +2,7 @@ from restock import restock_inventory
 from sales import daily_sales
 
 def run_simulation(total_days, inventory_records):
-    available_items = 2000
+    available_items = 0
     sold_units = 0
     restocked_units = None
     for current_day in range(0, total_days):
